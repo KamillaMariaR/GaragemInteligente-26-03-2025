@@ -1,0 +1,127 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #ffe4e1; /* Rosa claro */
+  color: #880e4f; /* Rosa escuro */
+}
+
+main {
+  background-color: #fff0f5; /* Rosa bem claro */
+  width: 70%;
+  margin: auto;
+  border: 2px solid #e91e63; /* Rosa choque */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #e91e63; /* Rosa choque */
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+#carro-imagem,
+#carroEsportivo-imagem,
+#caminhao-imagem,
+#moto-imagem {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.painel-velocidade {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.barra-velocidade {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ponteiro {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.velocidade-display {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.botoes {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #e91e63; /* Rosa choque */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:disabled {
+  background-color: #f8bbd0; /* Rosa mais claro */
+  cursor: not-allowed;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #e91e63; /* Rosa choque */
+  border-radius: 5px;
+}
+
+#informacoesVeiculo {
+  margin-top: 20px;
+  font-style: italic;
+  color: #795548; /* Marrom */
+}
+
+/* Estilos para a animação de aceleração */
+.animacao-aceleracao {
+    position: absolute;
+    top: -20px; /* Ajusta a posição acima da barra de velocidade */
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-out; /* Duração e tipo de animação */
+    pointer-events: none; /* Evita que a animação capture eventos de clique */
+}
+
+.animacao-aceleracao.ativa {
+    opacity: 1; /* Torna visível quando a classe 'ativa' é adicionada */
+}
+
+/* Estilos para a animação de freagem */
+.animacao-freagem {
+    position: absolute;
+    top: -20px; /* Ajusta a posição acima da barra de velocidade */
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.5); /* Fundo vermelho semi-transparente */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-out; /* Duração e tipo de animação */
+    pointer-events: none; /* Evita que a animação capture eventos de clique */
+}
+
+.animacao-freagem.ativa {
+    opacity: 1; /* Torna visível quando a classe 'ativa' é adicionada */
+}
